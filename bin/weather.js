@@ -1,10 +1,11 @@
-#!/usr/bin/env node
+#!/usr/bin/env node 
 
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import fs from 'fs';
 import _ from 'lodash';
 import solution from "../index.js";
+import { count } from "node:console";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,5 +19,5 @@ const content = fs.readFileSync(path.join(
 ), 'utf-8');
 
 // BEGIN
-
+solution(content);
 // END
